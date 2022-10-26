@@ -20,7 +20,9 @@ Each data set must contain a grid-only image and a sample-and-grid image. The gr
 If your sample is dose sensitive and the exposure time is very short, we recommend that you take many grid-only, flat, and dark images of that same exposure time and average them together. This way all the reference images have low noise and do not contribute to artifates in the final results.
 
 An example data set is provided in <>. If you would like any of the data presenting in "<final paper name>" please contact me.
-  
+
+![alt text](https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png?raw=true)
 
 ## Stage 2 - Flat and darking data
 
+I have included a 
