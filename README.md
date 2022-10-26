@@ -21,7 +21,7 @@ If your sample is dose sensitive and the exposure time is very short, we recomme
 
 An example data set is provided in <>. If you would like any of the data presenting in "<final paper name>" please contact me.
 
-![alt text](https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png?raw=true)
+![Sample-and-grid image of a lemon slice.](https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png?raw=true  =256x216)
 
 ## Stage 2 - Flat and darking data
 
