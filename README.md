@@ -21,9 +21,17 @@ If your sample is dose sensitive and the exposure time is very short, we recomme
 
 An example data set is provided in <>. If you would like any of the data presenting in "<final paper name>" please contact me.
 
-<img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="200"/>
 
-![Sample-and-grid image of a lemon slice.](https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png)
+<p align="middle">
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Grid.png" alt="Grid-only image" width="200" /> 
+</p>
+<p align="middle">
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Dark.png" alt="dark-current image." width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Flat.png" alt="Flat-field image" width="200" /> 
+</p>
+
+
 
 ## Stage 2 - Flat and darking data
 
