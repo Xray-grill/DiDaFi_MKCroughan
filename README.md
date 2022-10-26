@@ -22,5 +22,5 @@ If your sample is dose sensitive and the exposure time is very short, we recomme
 An example data set is provided in <>. If you would like any of the data presenting in "<final paper name>" please contact me.
   
 
-
+## Stage 2 - Flat and darking data
 
