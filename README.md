@@ -21,7 +21,7 @@ If your sample is dose sensitive and the exposure time is very short, we recomme
 
 An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCroughan/tree/master/Example_data/Stage_1-collecting_data. If you would like any of the data presenting in "<final paper name>" please contact me.
 
-####Image for the sample-and-grid, grid-only, dark-current and flat-field images.
+#### Image for the sample-and-grid, grid-only, dark-current and flat-field images.
 <p align="middle">
   <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="400" />
   <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Grid.png" alt="Grid-only image" width="400" /> 
@@ -35,4 +35,10 @@ An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCrough
 
 ## Stage 2 - Flat and darking data
 
-I have included a 
+I have included a snippit of code that can be used to flat and dark your images titled **flat_and_dark.py** and is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/flat_and_dark.py
+
+#### Flat and darked sample-and-grid and grid-only images
+<p align="middle">
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/Example_data/Stage_2-flat_and_darking_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="400" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/Example_data/Stage_2-flat_and_darking_data/Grid.png" alt="Grid-only image" width="400" /> 
+</p>
