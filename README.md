@@ -1,1 +1,2 @@
-# DiDaFi_MKCroughan
+# Directional dark field (DiDaFi) by Michelle K Croughan
+
