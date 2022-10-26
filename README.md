@@ -19,16 +19,16 @@ Each data set must contain a grid-only image and a sample-and-grid image. The gr
 
 If your sample is dose sensitive and the exposure time is very short, we recommend that you take many grid-only, flat, and dark images of that same exposure time and average them together. This way all the reference images have low noise and do not contribute to artifates in the final results.
 
-An example data set is provided in <>. If you would like any of the data presenting in "<final paper name>" please contact me.
+An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCroughan/tree/master/Example_data/Stage_1-collecting_data. If you would like any of the data presenting in "<final paper name>" please contact me.
 
-
+####Image for the sample-and-grid, grid-only, dark-current and flat-field images.
 <p align="middle">
-  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="200" />
-  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Grid.png" alt="Grid-only image" width="200" /> 
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/e98102cf6f77e30aaf04b6601dff3f8d14cd00ad/Example_data/Stage_1-collecting_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="400" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Grid.png" alt="Grid-only image" width="400" /> 
 </p>
 <p align="middle">
-  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Dark.png" alt="dark-current image." width="200" />
-  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Flat.png" alt="Flat-field image" width="200" /> 
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Dark.png" alt="dark-current image." width="400" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/1e64f9d9df2848931d3b2c55449b53c9f420590f/Example_data/Stage_1-collecting_data/Flat.png" alt="Flat-field image" width="400" /> 
 </p>
 
 
