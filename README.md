@@ -46,10 +46,10 @@ I have included a snippit of code that can be used to flat and dark your images 
 This is a recommended optional step one can use to determine the optimal kernel size to use for analyses. This assumes you have a regular grid pattern with the same grid period in both horizontal and vertical directions. Use the code **kernel_size.py**, it is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/kernel_size.py.
 This code gives the option to use DASK to run the code quickly, and is highly recommended. You can see the number of works to limit how much CPU it uses (without a limit I don't recommend using the computer for much while the code is running).
 
-The premise of this code is determine the best kernel size, $k$, to use for further analysis. The $c_gg,n$ images are computed as the auto-correlation of local grid-only image regions, in an ideal world they should be the same value across the whole image. Thus, "best kernel size" is defined as the kernel size that produces minimal variations in the $c_gg,n$ images.
+The premise of this code is determine the best kernel size, $k$, to use for further analysis. The $c_{gg,n}$ images are computed as the auto-correlation of local grid-only image regions, in an ideal world they should be the same value across the whole image. Thus, "best kernel size" is defined as the kernel size that produces minimal variations in the $c_{gg,n}$ images.
 
 The code produces plots like the one below, the lower the visibility in the coefficient images that better. 
  
 <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/Example_data/Stage_3-determine_kernel_size/Coefficient_visibility_w_ab13.png" alt="Visibility plot" width="400" /> 
 
-For this grid I note that the period is $p = 12.5816$ as per the title, and that this is for when averaging the image of $13 \times 13$ pixel regions. Looking at the curves for visibility for each coefficient I can see that using value of $k$ around 7 or 19 will be best. Using a higher value of $k$ will give less sensitivity to smaller blurring features, so I opt for $k = 7$.
+For this grid I note that the period is $p = 12.5816$ as per the title, and that this is for when averaging the image of $13 \times 13$ pixel regions. Looking at the curves for visibility for each coefficient I can see that using value of $k$ around $7$ or $19$ will be best. Using a higher value of $k$ will give less sensitivity to smaller blurring features, so I opt for $k = 7$.
