@@ -1,6 +1,6 @@
 #Code written by Michelle K Croughan, Monash University Australia, 2022
-#This can be found at https://github.com/Xray-grill/DiDaFi_MKCroughan
-#Any research output utilising this code must be open source and reference this published article: <DOI of article>
+#This code and license can be found at https://github.com/Xray-grill/DiDaFi_MKCroughan
+#Any research output utilising this code must reference this published article: <DOI of article>
 
 import tifffile as tiff
 
