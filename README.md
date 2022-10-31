@@ -6,14 +6,14 @@ DOI:
 
 Bibtec entry:
 
-Possible sentence you could use: "For the analysis of our data we employed/modified publicly avaliable code for the single-grid dark field retrival algorithm developed by Croughen et al. to retireve quantitaive dark field measures of our sample \cite{}."
+Possible sentence you could use: "For the analysis of our data we employed/modified publicly avaliable code for the single-grid dark field retrival algorithm developed by Croughan et al. to retireve quantitaive dark field measures of our sample \cite{}."
 
 Thank you very much!
 
 # DiDaFi Manual
 
 ## Stage 1 - Collecting data
-In order to use this code you must have data to analyse. This code has been developed for single-grid imaging using a wire mesh absorption grid. We hypothisis that to will work on other types of absoption/phase grid and irregular reference patterns.
+In order to use this code you must have data to analyse. This code has been developed for single-grid imaging using a wire mesh absorption grid. We hypothisis that to will work on other types of absoption/phase grid and irregular reference patterns, however have not tested and tweaked the code for those types of grids.
 
 Each data set must contain a grid-only image and a sample-and-grid image. The grid ideal should be in the exact sample position in both images. While this algorithm can work on data that is not flat-and-dark correct, we recommend doing this step. So also collected some flat and dark-current images.
 
@@ -34,7 +34,6 @@ An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCrough
 
 
 ## Stage 2 - Flat and darking data
-
 I have included a snippit of code that can be used to flat and dark your images titled **flat_and_dark.py** and is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/flat_and_dark.py
 
 #### Flat and darked sample-and-grid and grid-only images
@@ -42,3 +41,15 @@ I have included a snippit of code that can be used to flat and dark your images 
   <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/Example_data/Stage_2-flat_and_darking_data/Sample+grid.png" alt="Sample-and-grid image of a lemon slice." width="400" />
   <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/Example_data/Stage_2-flat_and_darking_data/Grid.png" alt="Grid-only image" width="400" /> 
 </p>
+
+## Stage 3 - Determine kernel size
+This is a recommended optional step one can use to determine the optimal kernel size to use for analyses. This assumes you have a regular grid pattern with the same grid period in both horizontal and vertical directions. Use the code **kernel_size.py**, it is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/kernel_size.py.
+This code gives the option to use DASK to run the code quickly, and is highly recommended. You can see the number of works to limit how much CPU it uses (without a limit I don't recommend using the computer for much while the code is running).
+
+The premise of this code is determine the best kernel size, $k$, to use for further analysis. The $c_gg,n$ images are computed as the auto-correlation of local grid-only image regions, in an ideal world they should be the same value across the whole image. Thus, "best kernel size" is defined as the kernel size that produces minimal variations in the $c_gg,n$ images.
+
+The code produces plots like the one below, the lower the visibility in the coefficient images that better. 
+ 
+<img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/Example_data/Stage_3-determine_kernel_size/Coefficient_visibility_w_ab13.png" alt="Visibility plot" width="400" /> 
+
+For this grid I note that the period is $p = 12.5816$ as per the title, and that this is for when averaging the image of $13 \times 13$ pixel regions. Looking at the curves for visibility for each coefficient I can see that using value of $k$ around 7 or 19 will be best. Using a higher value of $k$ will give less sensitivity to smaller blurring features, so I opt for $k = 7$.
