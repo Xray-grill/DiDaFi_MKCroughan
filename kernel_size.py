@@ -33,7 +33,7 @@ def find_kernel_size(GRID_IMAGE,SAVE_PATH,DASK,MAX_PERIOD):
         return np.mean((guess_period_x,guess_period_y)) #take the average of the two period estimates
 
     def correlation_expression(x_y_coordinates,c_0,c_1,c_2,c_3,c_4,phase_1,phase_2):
-        # Define function to fit to autocorrelation of I_g and crosscorrelation of I_g and I_sg. Allow phase of trig functions to be a free parameter.
+        # Define function to fit to auto-correlation of I_g and cross-correlation of I_g and I_sg. Allow phase of trig functions to be a free parameter.
         x2d, y2d = x_y_coordinates
         return c_0 + c_1*np.cos((2. *np.pi *x2d)/grid_period +phase_1)+ \
             c_2*np.cos((2.*np.pi *y2d)/grid_period +phase_2)+ \
