@@ -40,7 +40,7 @@ An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCrough
 
 
 ## Stage 2 - Flat and darking data
-I have included a snippit of code that can be used to flat and dark your images titled **flat_and_dark.py** and is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/flat_and_dark.py
+I have included a snippit of code that can be used to flat and dark your images titled **flat_and_dark.py** and is located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/186afba8ac77a56680a81b44fafaae134addb3d3/flat_and_dark.py" target = "_self">here</a>.
 
 #### Flat and darked sample-and-grid and grid-only images
 <p align="middle">
@@ -49,7 +49,7 @@ I have included a snippit of code that can be used to flat and dark your images 
 </p>
 
 ## Stage 3 - Determine kernel size
-This is a recommended optional step one can use to determine the optimal kernel size to use for analyses. This assumes you have a regular grid pattern with the same grid period in both horizontal and vertical directions. Use the code **kernel_size.py**, it is located at https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/kernel_size.py.
+This is a recommended optional step one can use to determine the optimal kernel size to use for analyses. This assumes you have a regular grid pattern with the same grid period in both horizontal and vertical directions. Use the code **kernel_size.py**, it is located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/cf1c8e35420c260ff0335375f47fe485e37260c8/kernel_size.py" target = "_self">here</a>.
 This code gives the option to use DASK to run the code quickly, and is highly recommended. You can see the number of works to limit how much CPU it uses (without a limit I don't recommend using the computer for much while the code is running).
 
 The premise of this code is determine the best kernel size, $k$, to use for further analysis. The $c_{gg,n}$ images are computed as the auto-correlation of local grid-only image regions, in an ideal world they should be the same value across the whole image. Thus, "best kernel size" is defined as the kernel size that produces minimal variations in the $c_{gg,n}$ images.
@@ -61,7 +61,7 @@ The code produces plots like the one below, the lower the visibility in the coef
 For this grid I note that the period is $p = 12.5816$ as per the title, and that this is for when averaging the image of $13 \times 13$ pixel regions. Looking at the curves for visibility for each coefficient I can see that using value of $k$ around $7$ or $19$ will be best. Using a higher value of $k$ will give less sensitivity to smaller blurring features, so I opt for $k = 7$.
 
 ## Stage 4 - Extract the coefficient images
-Use the code coefficient_images.py located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/90f97e4ffb879d71f008c78d0d02e65347f1a6d3/coefficient_images.py" target = "_self">Here</a>. This code takes the grid-only and sample-and-grid images and computes the correlation between small regions of each image. The out put of this code is 10 image, 1 for each coefficient $c_{gg,0}$, $c_{gsg,0}$, $c_{gg,1}$, $c_{gsg,1}$... ect. As the applying this part of the algorithm is very computationally expensive, I save this coefficient images and an interim step. That way, if I want to change how I compute the simultaneous equations or how I downsize the image, I do no need to recompute the coefficients images.
+Use the code coefficient_images.py located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/90f97e4ffb879d71f008c78d0d02e65347f1a6d3/coefficient_images.py" target = "_self">here</a>. This code takes the grid-only and sample-and-grid images and computes the correlation between small regions of each image. The out put of this code is 10 image, 1 for each coefficient $c_{gg,0}$, $c_{gsg,0}$, $c_{gg,1}$, $c_{gsg,1}$... ect. As the applying this part of the algorithm is very computationally expensive, I save this coefficient images and an interim step. That way, if I want to change how I compute the simultaneous equations or how I downsize the image, I do no need to recompute the coefficients images.
 
 #### Auto-correlation images $c_{gg,0}$, ..., $c_{gg,4}$
 <p align="middle">
