@@ -61,7 +61,7 @@ def find_kernel_size(GRID_IMAGE,SAVE_PATH,DASK,MAX_PERIOD):
             # Use curve fit to fit correlation expression to the autocorrelation. Occasionally this fails. So long as this doesn't happen to often its all good as Nans are ignored in further computation.
             try:
                 auto_popt, auto_pcov = curve_fit(correlation_expression,x_y_coordinates,autocorrelation_1D)
-                c_gg_part[xx,:] = abs(auto_popt[0:5])
+                c_gg_part[xx,:] = abs(auto_popt[0:5]) #Amplitudes can be fit as negative and positive values, but we are only interested in the magnitude, hence taking the abs()
             except:
                 c_gg_part[xx,:] = np.nan
                 print(" Unable to fit ", (kernel_size, xx))
