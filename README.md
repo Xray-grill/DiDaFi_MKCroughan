@@ -25,7 +25,7 @@ Each data set must contain a grid-only image and a sample-and-grid image. The gr
 
 If your sample is dose sensitive and the exposure time is very short, we recommend that you take many grid-only, flat, and dark images of that same exposure time and average them together. This way all the reference images have low noise and do not contribute to artifates in the final results.
 
-An example data set is provided in https://github.com/Xray-grill/DiDaFi_MKCroughan/tree/master/Example_data/Stage_1-collecting_data. If you would like any of the data presenting in "<final paper name>" please contact me.
+An example data set is provided <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/tree/master/Example_data/Stage_1-collecting_data" target = "_self">here</a>. If you would like any of the data presenting in "<final paper name>" please contact me.
 
 #### Image for the sample-and-grid, grid-only, dark-current and flat-field images.
 <p align="middle">
@@ -61,7 +61,7 @@ The code produces plots like the one below, the lower the visibility in the coef
 For this grid I note that the period is $p = 12.5816$ as per the title, and that this is for when averaging the image of $13 \times 13$ pixel regions. Looking at the curves for visibility for each coefficient I can see that using value of $k$ around $7$ or $19$ will be best. Using a higher value of $k$ will give less sensitivity to smaller blurring features, so I opt for $k = 7$.
 
 ## Stage 4 - Extract the coefficient images
-Use the code coefficient_images.py located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/90f97e4ffb879d71f008c78d0d02e65347f1a6d3/coefficient_images.py" target = "_self">here</a>. This code takes the grid-only and sample-and-grid images and computes the correlation between small regions of each image. The out put of this code is 10 image, 1 for each coefficient $c_{gg,0}$, $c_{gsg,0}$, $c_{gg,1}$, $c_{gsg,1}$... ect. As the applying this part of the algorithm is very computationally expensive, I save this coefficient images and an interim step. That way, if I want to change how I compute the simultaneous equations or how I downsize the image, I do no need to recompute the coefficients images.
+Use the code coefficient_images.py located <a href = "https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/90f97e4ffb879d71f008c78d0d02e65347f1a6d3/coefficient_images.py" target = "_self">here</a>. This code takes the grid-only and sample-and-grid images and computes the correlation between small regions of each image. The out put of this code is 10 image, 1 for each coefficient $c_{gg,0}$, $c_{gsg,0}$, $c_{gg,1}$, $c_{gsg,1}$... ect. As the applying this part of the algorithm is very computationally expensive, I save this coefficient images and an interim step. That way, if I want to change how I compute the simultaneous equations or how I downsize the image, I do not need to recompute the coefficients images.
 
 #### Auto-correlation images $c_{gg,0}$, ..., $c_{gg,4}$
 <p align="middle">
@@ -81,3 +81,21 @@ Use the code coefficient_images.py located <a href = "https://github.com/Xray-gr
   <img src="" alt="c_gsg,4" width="100" />
 </p>
 
+## Stage 5 - Retrieve directional dark field parameters and metrics
+This step produces all the fun images with information about the directional dark field of the sample! Use the dark_field_retrieval.py code found     .
+
+#### Major scattering angle $\Theta_M$, minor scattering angle $\Theta_m$, and sample transmission $T$
+<p align="middle">
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/Theta_major.png" alt="Major" width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/Theta_minor.png" alt="Minor" width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/sample_transmission.png" alt="transmission" width="200" />
+</p>
+
+#### RMS scattering angle $\Theta_{RMS}$, asymmetry $\Theta_{ASY}$, and directional angle $\theta$
+<p align="middle">
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/strength.png" alt="RMS" width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/asymmetry.png" alt="ASY" width="200" />
+  <img src="https://github.com/Xray-grill/DiDaFi_MKCroughan/blob/a130e778aaa576a829f5e7a4ec08ff87c800c6f0/Example_data/Stage_5-dark_field_retrieval/theta.png" alt="theta" width="200" />
+</p>
+
+## Stage 6 - Create HSV image
