@@ -40,8 +40,9 @@ def retrieve_dark_field(PATH,SAVE_PATH,PERIOD,AVERAGE_BY,ODD,PIXEL_SIZE):
 
         # Piecewise function for asymmetry
         asymmetry = 1 - semi_min/semi_maj
-        asymmetry[(asymmetry > 2/3) | (np.iscomplex(asymmetry))] = np.sqrt((semi_maj[asymmetry > 2/3]**2-semi_min[asymmetry > 2/3]**2)/(2*semi_maj[asymmetry > 2/3]**2))
+        asymmetry[semi_min**2/semi_maj**2 < 1./9.] = np.sqrt((semi_maj[asymmetry > 2/3]**2-semi_min[asymmetry > 2/3]**2)/(2*semi_maj[asymmetry > 2/3]**2))
         asymmetry[np.iscomplex(strength)]=0
+
         return asymmetry, strength
 
     def make_real_image(complex_array): 
