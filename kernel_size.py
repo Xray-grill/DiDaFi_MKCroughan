@@ -88,7 +88,7 @@ def find_kernel_size(GRID_IMAGE,SAVE_PATH,DASK,MAX_PERIOD):
         sample_in_y = image_height-2*kernel_size+1 #the number of data points in the y direction
 
         c_gg = np.empty((sample_in_y,sample_in_x,5)) # create save data array for the c_gg,n coefficients
-        print("Processing kernel size {}. Max kernel size to investigate is {}".format(kernel_size, np.max(kernel_size)))
+        print("Processing kernel size {}. Max kernel size to investigate is {}".format(kernel_size, np.max(kernel_sizes)))
 
         if DASK: # If using DASK process using this method
             values = [delayed(compute_coefficents)(grid_image[yy:yy+2*kernel_size,:],sample_in_x, kernel_size, kernel_size_half) for yy in range(sample_in_y)] # Loop over each row in the image, giving each row to a worker.
