@@ -3,11 +3,30 @@
 #### Hello and welcome to my repository. 
 This code is open source and you are welcome to use it freely under the BSD-3-Clause License. Basically all I want is that if you use my code in a way that contributes to some research output I ask that you cite my publication associated with the release of this code:
 
-DOI:
+DOI (arXiv): https://doi.org/10.48550/arXiv.2211.11757 (arXiv)
 
-Bibtec entry:
+Bibtec entry (arXiv):
 
-Possible sentence you could use: "For the analysis of our data we employed/modified publicly available code for the single-grid dark field retrieval algorithm developed by Croughan et al. to retrieve quantitative dark field measures of our sample \cite{}."
+@misc{Croughan2022,
+  doi = {10.48550/ARXIV.2211.11757},
+  
+  url = {https://arxiv.org/abs/2211.11757},
+  
+  author = {Croughan, Michelle K and How, Ying Ying and Pennings, Allan and Morgan, Kaye S},
+  
+  keywords = {Image and Video Processing (eess.IV), Optics (physics.optics), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Physical sciences, FOS: Physical sciences},
+  
+  title = {Directional dark field retrieval with single-grid x-ray imaging},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International}
+}
+
+
+Possible sentence you could use: "For the analysis of our data we employed/modified publicly available code for the single-grid dark field retrieval algorithm developed by Croughan et al. to retrieve quantitative dark field measures of our sample \cite{Croughan2022}."
 
 #### Papers that cite this work:
 1. You could be the first!
