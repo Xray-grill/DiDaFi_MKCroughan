@@ -7,23 +7,23 @@ DOI (arXiv): https://doi.org/10.48550/arXiv.2211.11757 (arXiv)
 
 Bibtec entry (arXiv):
 
-@misc{Croughan2022,
-  doi = {10.48550/ARXIV.2211.11757},
-  
-  url = {https://arxiv.org/abs/2211.11757},
-  
-  author = {Croughan, Michelle K and How, Ying Ying and Pennings, Allan and Morgan, Kaye S},
-  
-  keywords = {Image and Video Processing (eess.IV), Optics (physics.optics), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Physical sciences, FOS: Physical sciences},
-  
-  title = {Directional dark field retrieval with single-grid x-ray imaging},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International}
-}
+    @misc{Croughan2022,
+      doi = {10.48550/ARXIV.2211.11757},
+
+      url = {https://arxiv.org/abs/2211.11757},
+
+      author = {Croughan, Michelle K and How, Ying Ying and Pennings, Allan and Morgan, Kaye S},
+
+      keywords = {Image and Video Processing (eess.IV), Optics (physics.optics), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Physical sciences, FOS: Physical sciences},
+
+      title = {Directional dark field retrieval with single-grid x-ray imaging},
+
+      publisher = {arXiv},
+
+      year = {2022},
+
+      copyright = {Creative Commons Attribution Non Commercial No Derivatives 4.0 International}
+    }
 
 
 Possible sentence you could use: "For the analysis of our data we employed/modified publicly available code for the single-grid dark field retrieval algorithm developed by Croughan et al. to retrieve quantitative dark field measures of our sample \cite{Croughan2022}."
